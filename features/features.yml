@@ -1,0 +1,78 @@
+# features/features.yml — THE FEATURE INDEX for zer0-id (schema features/v1, governance kit v0.1.1).
+# One entry per capability, stable id ZID-NNN (never reused). status: shipped | partial | planned | deprecated | tbd.
+# `prd:` links each feature to PRD.md requirements. The PRD "Feature catalog" block is generated:
+#   python3 <bamr87/bamr87>/tools/governance_lint.py prd-sync . --write
+schema: features/v1
+repo: bamr87/zer0-id
+
+features:
+  - id: ZID-001
+    title: "HTTP service exposing /healthz and /.well-known/openid-configuration"
+    description: "HTTP service exposing /healthz and /.well-known/openid-configuration."
+    implemented: true
+    status: shipped
+    prd: [FR1]
+    surface: api
+    link: go.mod
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: ZID-002
+    title: "JWKS endpoint with a generated signing key"
+    description: "JWKS endpoint with a generated signing key."
+    implemented: false
+    status: planned
+    prd: [FR2]
+    surface: api
+    docs: PRD.md
+    tags: [phase-1]
+    date: 2026-10-28
+  - id: ZID-003
+    title: "Authorization code + PKCE flow with a client registry"
+    description: "Authorization code + PKCE flow with a client registry."
+    implemented: false
+    status: planned
+    prd: [FR3]
+    surface: api
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: ZID-004
+    title: "ID token and access token issuance (RS256/EdDSA)"
+    description: "ID token and access token issuance (RS256/EdDSA)."
+    implemented: false
+    status: planned
+    prd: [FR4]
+    surface: api
+    docs: PRD.md
+    tags: [phase-2]
+    date: 2026-10-28
+  - id: ZID-005
+    title: "WebAuthn passkey registration and login"
+    description: "WebAuthn passkey registration and login."
+    implemented: false
+    status: planned
+    prd: [FR5]
+    surface: api
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: ZID-006
+    title: "Conformance test run against the OpenID suite"
+    description: "Conformance test run against the OpenID suite."
+    implemented: false
+    status: planned
+    prd: [FR6]
+    surface: api
+    docs: PRD.md
+    tags: [phase-3]
+    date: 2026-10-28
+  - id: ZID-007
+    title: "Standard CI gate"
+    description: "Every push and PR runs the fleet's shared standard-ci gate."
+    implemented: true
+    status: shipped
+    prd: [NFR1]
+    surface: infra
+    link: .github/workflows/ci.yml
+    tags: [ci]
+    date: 2026-10-28

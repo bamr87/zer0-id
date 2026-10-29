@@ -1,0 +1,17 @@
+# OS / editors
+.DS_Store
+*.swp
+.idea/
+
+# env & secrets
+.env
+.env.*
+!.env.example
+
+# agent artifacts
+pr-result.txt
+
+# language
+/zer0-id
+*.pem
+*.key
