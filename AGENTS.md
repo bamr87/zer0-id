@@ -3,6 +3,8 @@
 
 # zer0-id
 
+> zer0-id's direction is to become the ultimate open home for all things open identity and single sign-on: data, tools, resources and transparency, with standards-based OIDC, PKCE, signed JWTs and passwordless passkeys for everyone ([constitution](docs/constitution.md) §1).
+
 ## What this repo is
 
 A small OpenID Connect identity provider in Go with passkey (WebAuthn) login. Single sign-on for the fleet's apps, built from the specs up: OIDC discovery, authorization code + PKCE, signed JWTs and passwordless passkeys.

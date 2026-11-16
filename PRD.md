@@ -11,6 +11,23 @@ Single sign-on for the fleet's apps, built from the specs up: OIDC discovery, au
 | Version | Date | Notes |
 | --- | --- | --- |
 | 0.1 | 2026-10-28 | Initial requirements and phased roadmap (repo foundation). |
+| 0.2 | 2026-11-16 | Added §1.1 missions (amendment record in docs/amendments/). |
+
+## 1.1 Missions
+
+zer0-id's direction is to become the ultimate open home for all things open identity and single sign-on — data, tools, resources and transparency, gathered in one place that anyone can inspect and reuse.
+
+1. **Provide data, tools, resources and transparency for all stakeholders, identity practitioners and the general public.** Operators, application authors and anyone signing in are first-class audiences. The aim is a shared, inspectable commons: the same protocols, the same keys, and the same login flows for everyone.
+2. **Build single sign-on from the specs up: OIDC discovery, authorization code plus PKCE, signed JWTs and passwordless passkeys, so every login is standards-based and auditable.** A small identity provider should be something a practitioner can read against the specifications, not a proprietary black box.
+3. **Serve as SSO for the fleet's apps — the console, ragio-ai, fredgar-ai, zer0-CMS and fleet-mobile — with identities that stay under the operator's control.** Fleet single sign-on should be reusable, reviewable and local-first where it can be, without handing account control to a third-party IdP by default.
+
+These missions set the course; they do not claim the work is finished. They serve the PRD's learning-first path: an OpenID Connect provider with passkey login, built from the specifications up for the fleet's apps.
+
+**Requirement**
+
+- MR1: Constitution §1 states one direction statement and exactly three numbered missions, and the README and AGENTS.md taglines match that direction and link to constitution §1.
+
+Feature [ZID-008](features/features.yml) traces to requirement MR1.
 
 ## 2. Goals
 
@@ -65,6 +82,7 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [ZID-005](features/features.yml) | WebAuthn passkey registration and login | planned | [`PRD.md`](PRD.md) | FR5 |
 | [ZID-006](features/features.yml) | Conformance test run against the OpenID suite | planned | [`PRD.md`](PRD.md) | FR6 |
 | [ZID-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
+| [ZID-008](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
 
 **Requirement → feature trace**
 
@@ -77,4 +95,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR5 | ZID-005 |
 | FR6 | ZID-006 |
 | NFR1 | ZID-007 |
+| MR1 | ZID-008 |
 <!-- features:end -->
