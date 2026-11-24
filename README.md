@@ -23,6 +23,27 @@ Single sign-on for the fleet's apps, built from the specs up: OIDC discovery, au
 
 SSO for the fleet console, ragio-ai, fredgar-ai and zer0-CMS; identities for fleet-mobile.
 
+## Configuration
+
+Configuration comes from environment variables; nothing is read from files.
+
+| Variable | Default | Purpose |
+| --- | --- | --- |
+| `ZID_ISSUER` | `http://localhost:8080` | The issuer URL published in the OIDC discovery document. |
+| `ZID_ADDR` | `:8080` | The address the HTTP server listens on (`host:port` or `:port`). |
+
+## Run
+
+```bash
+ZID_ADDR=:9090 go run .              # logs "zer0-id listening on :9090"
+curl -s localhost:9090/healthz       # {"status":"ok"}
+curl -s localhost:9090/readyz        # {"checks":{},"status":"ok"}
+curl -s localhost:9090/version       # {"built_at":…,"commit":…,"name":"zer0-id","version":…}
+curl -s localhost:9090/.well-known/openid-configuration
+```
+
+The server sets read-header, read, write and idle timeouts (5s, 10s, 15s, 60s) and shuts down gracefully on SIGINT or SIGTERM, waiting up to 10s for in-flight requests. `/version` reads the build stamp Go embeds; a release build can set it explicitly with `go build -ldflags "-X main.version=v0.1.0 -X main.commit=$(git rev-parse HEAD) -X main.builtAt=$(date -u +%FT%TZ)"`.
+
 ## Quick start
 
 ```bash
