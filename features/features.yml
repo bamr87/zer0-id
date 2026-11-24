@@ -85,3 +85,14 @@ features:
     surface: docs
     link: "docs/constitution.md"
     docs: "PRD.md"
+  - id: ZID-009
+    title: "Operational endpoints and a hardened HTTP server"
+    description: "JSON /healthz (liveness), /readyz (readiness with a checks object) and /version (name, version, commit, built_at) per UPS-BE-10/11; listen address from ZID_ADDR (default :8080); http.Server read/write/idle timeouts and graceful SIGINT/SIGTERM shutdown."
+    implemented: true
+    status: shipped
+    prd: [FR1, NFR2]
+    surface: api
+    link: main.go
+    docs: README.md
+    tags: [phase-1, security]
+    date: 2026-11-24

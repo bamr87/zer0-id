@@ -83,12 +83,13 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | [ZID-006](features/features.yml) | Conformance test run against the OpenID suite | planned | [`PRD.md`](PRD.md) | FR6 |
 | [ZID-007](features/features.yml) | Standard CI gate | shipped | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | NFR1 |
 | [ZID-008](features/features.yml) | Constitution missions | planned | [`docs/constitution.md`](docs/constitution.md) · [`PRD.md`](PRD.md) | MR1 |
+| [ZID-009](features/features.yml) | Operational endpoints and a hardened HTTP server | shipped | [`main.go`](main.go) · [`README.md`](README.md) | FR1, NFR2 |
 
 **Requirement → feature trace**
 
 | Requirement | Features |
 | --- | --- |
-| FR1 | ZID-001 |
+| FR1 | ZID-001, ZID-009 |
 | FR2 | ZID-002 |
 | FR3 | ZID-003 |
 | FR4 | ZID-004 |
@@ -96,4 +97,5 @@ Every user-facing capability has a stable id in the feature catalog [`features/f
 | FR6 | ZID-006 |
 | NFR1 | ZID-007 |
 | MR1 | ZID-008 |
+| NFR2 | ZID-009 |
 <!-- features:end -->
